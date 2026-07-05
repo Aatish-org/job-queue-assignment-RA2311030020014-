@@ -272,10 +272,6 @@ Frontend
 **Vercel:**  
 *https://job-queue-assignment-ra-23110300200-xi.vercel.app/*
 
-Backend
-
-**Render:**  
-*Add your backend URL here after deployment*
 
 ---
 
