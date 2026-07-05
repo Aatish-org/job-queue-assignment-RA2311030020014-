@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("dotenv/config");
+const bullmq_1 = require("bullmq");
+const processor_1 = require("./processor");
+const queue_1 = require("./queue");
+const worker = new bullmq_1.Worker(processor_1.QUEUE_NAME, processor_1.processJob, { connection: queue_1.connection, concurrency: 5 });
+worker.on("ready", () => console.log("👷 Worker ready"));
+worker.on("active", (job) => console.log("⚙️  Job active:", job.id));
+worker.on("completed", (job) => console.log("✅ Worker completed event:", job.id));
+worker.on("failed", (job, err) => console.log("❌ Worker failed event:", job?.id, err.message));
+worker.on("error", (err) => console.error("worker error:", err));
