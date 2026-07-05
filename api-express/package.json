@@ -38,23 +38,5 @@
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5"
-  },
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "CommonJS",
-    "moduleResolution": "node16",
-    "rootDir": "src",
-    "outDir": "dist",
-    "strict": false,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "ignoreDeprecations": "6.0"
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  }
 }
